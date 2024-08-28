@@ -1,0 +1,220 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('./Bosque\ fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ECF0F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.container {
+    background-color: rgba(52, 73, 94, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ECF0F1;
+}
+
+.alert {
+    color: #E74C3C;
+    font-size: 14px;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+.text-areas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 48%;
+    height: 320px;
+    padding: 10px;
+    border: 1px solid #7F8C8D;
+    border-radius: 5px;
+    background-color: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+    color: #ECF0F1;
+    font-size: 16px;
+}
+
+.output-text {
+    width: 48%;
+    height: 320px;
+    padding: 10px;
+    border: 1px solid #7F8C8D;
+    border-radius: 5px;
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #ECF0F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.output-text img {
+    max-width: 80%;
+    height: auto;
+}
+
+.output-text .main-message {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.output-text .sub-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+#encryptBtn {
+    background-color: #1ABC9C;
+    color: white;
+}
+
+#decryptBtn {
+    background-color: #16A085;
+    color: white;
+}
+
+#copyBtn {
+    background-color: #2ECC71;
+    color: white;
+}
+
+button:hover {
+    background-color: #3498DB;
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-banner {
+    background-color: #004D40;
+    color: #ecf0f1;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-banner p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .text-areas {
+        flex-direction: column;
+    }
+
+    textarea, .output-text {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        max-width: none;
+    }
+
+    .header {
+        top: 10px;
+        left: 10px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    textarea, .output-text {
+        height: 200px;
+    }
+
+    .buttons {
+        gap: 5px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
